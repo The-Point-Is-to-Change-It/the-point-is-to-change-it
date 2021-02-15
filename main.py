@@ -16,6 +16,7 @@ from flask_cors import (CORS, cross_origin)
 from uuid import uuid4
 from os import environ
 from api import *
+from routes import *
 
 
 # initiate flask app and secret key
@@ -30,6 +31,9 @@ CORS(app, resources={r"*": {"origins": "*"}})
 
 # register blueprints
 app.register_blueprint(api_v1)
+app.register_blueprint(docs_v1)
+
+
 
 
 
