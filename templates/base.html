@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html lang="en" class="bg-dark">
+<head>
+  <meta charset="utf-8">
+
+  {% block head %}
+  <title>{% block title %}{% endblock %} The Point Is to Change It</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+  {% endblock %}
+
+
+</head>
+
+<body>
+  <header>
+
+    
+  </header>
+
+  <main>
+
+
+  {% block content %}
+  {% endblock %}
+  </main>
+
+  <footer>
+    {% block footer %}
+      &copy; Copyright 2020 <a class="text-white" href="http://github.com/rmolimock">Russell Molimock</a>, all rights reserved
+    {% endblock %}
+  </footer>
+
+</body>
+</html>

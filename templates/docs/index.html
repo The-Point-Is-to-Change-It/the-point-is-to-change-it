@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% block title %}Docs | {% endblock %}
+{% block head %}
+  {{ super() }}    
+  <link rel="stylesheet" href="{{ url_for('static', filename='docs/docs.css') }}">
+{% endblock %}
+
+
+  {% block content %}
+
+  <header>
+      <h1>The Point Is to Change It Documentation</h1>
+  </header>
+
+
+  <section id="docs-index">
+    <ul>
+      <h2>Index</h2>
+        <li><a href="{{ url_for('docs.stories')}}">Stories</a></li>
+        <li><a href="#directory-tree">Directory Tree</a></li>
+        <li><a href="#routes">Routes</a></li>
+        <li><a href="#api-enpoints">API Endpoints</a></li>
+        <li><a href="#models">Models</a></li>
+    </ul>
+  </section>
+
+
+
+  <section id="directory-tree">
+    <ul>
+      <h2>Directory Tree</h2>
+      <li></li>
+    </ul>
+  </section>
+
+  <section id="routes">
+    <ul>
+      <h2>Routes</h2>
+
+      <li id="route-0">
+        <h3 class="todo">1 Status: To Do</h3>
+        <h3>GET /</h2>
+        <ol>
+          <h3>Acceptance Criteria</h3>
+          <li>Return a static template with information about The Point Is to Change It, focused on driving visitors to <a href="#route-1">route #1</a></li>
+        </ol>
+      </li>
+
+      <li id="route-1">
+        <h3 class="todo">1 Status: To Do</h3>
+        <h3>GET /register</h2>
+        <ol>
+          <h3>Acceptance Criteria</h3>
+          <li>Return a template with user a registration form, as per <a href="{{ url_for('docs.stories') }}#story-1">user story #1</a></li>
+          <li>Registration form has action set to route POST /register</li>
+        </ol>
+      </li>
+
+      <li id="route-2">
+        <h3 class="todo">2 Status: To Do</h3>
+        <h3>POST /register</h2>
+        <ol>
+          <h3>Acceptance Criteria</h3>
+          <li>Calls /api/register to review and save user credentials</li>
+          <li>If registration is successful, redirect to user's profile at <a href="#route-3">route #3</a></li>
+          <li>Otherwise, redirect to the landing page at route 0</li>
+        </ol>
+      </li>
+
+      <li id="route-1">
+        <h3 class="todo">1 Status: To Do</h3>
+        <h3>POST /register</h2>
+        <ol>
+          <h3>Acceptance Criteria</h3>
+          <li>Calls /api/register to review and save user credentials</li>
+          <li>if registration is successful, redirect to user's profile at <a href="#route-2">route #2</a></li>
+        </ol>
+      </li>
+
+    </ul>
+  </section>
+
+  <section id="api-enpoints">
+    <ul>
+      <h2>API Endpoints</h2>
+      <li></li>
+    </ul>
+  </section>
+
+  <section id="models">
+    <ul>
+      <h2>Models</h2>
+      <li></li>
+    </ul>
+  </section>
+  
+
+
+  {% endblock %}
+
+

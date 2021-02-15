@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block title %}Docs | {% endblock %}
+{% block head %}
+  {{ super() }}    
+  <link rel="stylesheet" href="{{ url_for('static', filename='docs/docs.css') }}">
+{% endblock %}
+
+
+  {% block content %}
+
+  <header>
+      <h1>The Point Is to Change It Documentation</h1>
+  </header>
+
+  <section id="docs-index">
+    <ul>
+      <h2>Index</h2>
+        <li><a href="{{ url_for('docs.stories')}}">Stories</a></li>
+        <li><a href="{{ url_for('docs.index') }}">Directory Tree</a></li>
+        <li><a href="{{ url_for('docs.index') }}">Routes</a></li>
+        <li><a href="{{ url_for('docs.index') }}">API Endpoints</a></li>
+        <li><a href="{{ url_for('docs.index') }}#models">Models</a></li>
+    </ul>
+  </section>
+
+<section id="stories">
+<ul>
+
+    <h1>Stories</h1>
+
+    <li id="story-0">
+    <h3 class="todo">0 Status: To Do</h3>
+    <h2>As a visitor, I want to learn more about The Point Is to Change It, so I can understand it's value.</h2>
+    <ul>
+        <h3>Acceptance Criteria</h3>
+        <li></li>
+    </ul>
+    </li>
+
+    <li id="story-1">
+    <h3 class="todo">1 Status: To Do</h3>
+    <h2>As a visitor, I want to register, so I can log into my account.</h2>
+    <ol>
+        <h3>Acceptance Criteria</h3>
+        <li>Inputs for 5 fields: username, handle, email, password, and password confirmation</li>
+        <li>Password must be > 7 characters, contain one uppercase charater, and one special character</li>
+        <li>Failure to meet password criteria alerts the user to the error</li>
+        <li>Email must be unique</li>
+        <li>Handle must be unique</li>
+        <li>All fields are required</li>
+        <li>Successful registration redirects to an account page where more information is requested</li>
+    </ol>
+    </li>
+
+    <li id="story-2">
+    <h3 class="todo">2 Status: To Do</h3>
+    <h2>As a user, I want to complete my profile information, so I can connect with others more easily.</h2>
+    <ul>
+        <h3>Acceptance Criteria</h3>
+        <ol>
+        <li>User can choose from a selection of at least several avatars to represent them</li>
+        <li>User can answer any or all of their profile prompts (text inputs):</li>
+        <ol>
+            <li>What is your Big Why?</li>
+            <li>What kind of communities are you looking for?</li>
+            <li>What are your values?</li>
+            <li>What are your interests?</li>
+        </ol>
+        <li>After modifying the above, user can save their new profile information</li>
+        <li>User is alerted that changes have been saved</li>
+        <li>Text fields do not accept code and will display an error if any is present</li>
+        </ol>
+    </ul>
+    </li>
+
+</ul>
+</section>
+
+{% endblock %}
